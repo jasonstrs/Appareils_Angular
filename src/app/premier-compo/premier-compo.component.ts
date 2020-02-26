@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./premier-compo.component.scss']
 })
 export class PremierCompoComponent implements OnInit {
-
+  
   constructor() { }
 
   ngOnInit(): void {
