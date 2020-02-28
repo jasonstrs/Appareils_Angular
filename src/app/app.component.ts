@@ -8,9 +8,34 @@ import { Component } from '@angular/core';
 export class AppComponent {
   isAuth =false;
 
-  appareilOne = "Machine à laver";
+  lastUpdate = new Promise(
+    (resolve,reject) => {
+      const date = new Date();
+      setTimeout(
+        ()=>{
+          resolve(date);
+        },2000
+      );
+    }
+  );
+
+  appareils = [
+    {
+      name: 'Machine à laver',
+      status: 'éteint'
+    },
+    {
+      name: 'Télévision',
+      status: 'allumé'
+    },
+    {
+      name: 'Ordinateur',
+      status: 'éteint'
+    }
+  ];
+  /*appareilOne = "Machine à laver";
   appareilTwo = "Télévision";
-  appareilThree = "Ordinateur";
+  appareilThree = "Ordinateur";*/
 
   constructor(){
     setTimeout(
